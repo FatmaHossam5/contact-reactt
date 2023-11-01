@@ -53,3 +53,41 @@ color: white;
 .footer{
   justify-content: space-between;
 }
+
+@media screen and (min-width:502px) and (max-width:700px){
+
+  #search{
+    border-radius: 15px;
+    border-style: none;
+    width:  89%;
+    }
+    .butt .add{
+   transform: translateX(-30%);
+    }
+    #add-form{
+      transform: translateX(-7%);
+  
+    }
+   
+.cont{
+  transform: translate(-3%);
+}
+#edit-form .modal-body{
+  display: block!important;
+  width: 80%;
+  margin-left: 30px!important;
+
+ 
+}
+.modal-body .fn{
+  margin-bottom: 25px!important;
+}
+.up{
+  transform: translateX(-7%);
+}
+
+}
+@media screen and (min-width:701px) and (max-width:992px) {
+  .cont{transform: translateX(2%);}
+  .users{transform: translateX(-1%);}
+}

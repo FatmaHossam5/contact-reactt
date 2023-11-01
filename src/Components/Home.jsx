@@ -104,13 +104,13 @@ setContact({...contact,'firstName':contacts[idx].firstName,"lastName":contacts[i
 
 }
 return <>
-<div className="container border my-5">
-    <div className="search col-md-8 m-auto py-3">
-        <input onChange={(e) => getResult(e.target.value)} type="text"placeholder='search by Name'id="search" />
+<div className="container border my-5 cont   ">
+    <div className=" search col-md-8  m-auto py-3">
+        <input onChange={(e) => getResult(e.target.value)} type="text"placeholder='search by Name'id="search"  />
     </div>
     {results.map((res, index) => {
                return (
-                   <div key={index} className="users d-flex col-md-8 m-auto ">
+                   <div key={index} className="users d-flex col-md-8  m-auto ">
                       <div className="left d-flex ">
                            <img className='prof ' src={res.picture} alt="profile" />
                           <div className="inform ms-5 my-3">
@@ -126,13 +126,13 @@ return <>
               )
           })}
     <div className="container my-5">
-                <div className="col-md-12 text-end">
+                <div className="col-md-12 butt text-end">
                     <a className="  add p-2 btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-plus"></i> Add
                         New Contact</a>
                 </div>
             </div>
               {/* <!-- Add Modal --> */}
-              <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div className="modal fade " id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <form id="add-form" onSubmit={addContact}>
                     <div className="modal-dialog">
                         <div className="modal-content">
@@ -140,7 +140,7 @@ return <>
                                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div className="modal-body  d-flex mx-2">
-                            <input onChange={getContact} placeholder="firstName" name="firstName"id="firstName" className="form-control mx-2" type="text" />
+                            <input onChange={getContact} placeholder="firstName" name="firstName"id="firstName" className="form-control  mx-2" type="text" />
                              <input onChange={getContact} placeholder="lastName" name="lastName" id="lastName" className="form-control mx-2" type="text" />
                             </div>
                             <div className="modal-body mx-2  d-flex">
@@ -164,7 +164,7 @@ return <>
                                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div className="modal-body d-flex mx-2">
-                            <input onChange={(e)=>{getFName(e)}} placeholder="firstName" name="firstName" value={contact.firstName} className="form-control mx-2" type="text" />
+                            <input onChange={(e)=>{getFName(e)}} placeholder="firstName" name="firstName" value={contact.firstName} className="form-control mx-2 fn" type="text" />
                             <input onChange={(e)=>{getLName(e)}}  placeholder="lastName" name="lastName" value={contact.lastName}className="form-control mx-2" type="text" />
                             </div>
                             <div className="modal-body d-flex mx-2">
@@ -172,20 +172,20 @@ return <>
                             {/* <input onChange={getContact} placeholder="phone" name="phone" className="form-control mx-2" type="text" /> */}
                             
                             </div>
-                            <div className="modal-footer">
+                            <div className="modal-footer up">
                                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" data-dismiss="modal">Close</button>
-                                <button data-bs-dismiss="modal" type="submit" className="btn btn-info">Update Contact</button>
+                                <button data-bs-dismiss="modal" type="submit" className="btn btn-info ">Update Contact</button>
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
 
-<div className="container">
-    <div className="row">
+<div className="container cont m-auto">
+    <div className="row col-12">
     {contacts.map((cont,idx)=>{
         return(
-            <div key={idx} className="users d-flex col-md-8 m-auto my-3 ">
+            <div key={idx} className="users d-flex col-md-8 m-auto  my-3 ">
             <div className=" cont left d-flex ">
                 <div className="img-holder m-2">
                 <img className='prof'src={cont.picture}  alt="profile" />
@@ -199,7 +199,7 @@ return <>
 </div>
 <div className="icons m-4  ">
 <a >
-<i  data-bs-toggle="modal" data-bs-target="#exampleModal1" onClick={()=>{getData(idx)}}   className="fa-solid fa-pen-to-square fa-2x mx-2  edit "></i>
+<i  data-bs-toggle="modal" data-bs-target="#exampleModal1" onClick={()=>{getData(idx)}}   className="fa-solid fa-pen-to-square fa-2x mx-1 edit "></i>
 </a>
 <i onClick={()=>{deleteNote(cont.id)}} className="fa-solid fa-trash  fa-2x delete"></i>
 </div>
